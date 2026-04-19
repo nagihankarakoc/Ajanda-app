@@ -15,6 +15,7 @@ export default function Login() {
 
     if (username === "Nagihan Karakoç" && password === "123") {
       localStorage.setItem("user", username);
+     
       navigate("/dashboard");
     } else {
       alert("Bilgiler yanlış!");
