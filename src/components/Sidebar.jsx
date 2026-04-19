@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaStickyNote } from "react-icons/fa";
 export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
- // const user = localStorage.getItem("user");
+ 
 
   const menu = [
     { name: "Ajanda", path: "/dashboard", icon: <FaCalendarAlt /> },
