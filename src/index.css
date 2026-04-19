@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* TAKVİM TAM GENİŞLİK */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: inherit;
+}
+
+/* GÜN KUTULARI */
+.react-calendar__tile {
+  position: relative;
+}
+
+/* SEÇİLİ GÜN */
+.react-calendar__tile--active {
+  background: #2563eb !important;
+  color: white;
+  border-radius: 10px;
+}
+
+/* BUGÜN */
+.react-calendar__tile--now {
+  background: #dbeafe !important;
+  border-radius: 10px;
+}
+
+/* ÜST BAŞLIK */
+.react-calendar__navigation {
+  margin-bottom: 10px;
+}
