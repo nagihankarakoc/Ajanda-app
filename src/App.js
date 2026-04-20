@@ -3,26 +3,34 @@ import Dashboard from "./pages/Dashboard";
 import Notes from "./pages/Notes";
 import Login from "./pages/Login";
 
-function App() {
-
+const ProtectedRoute = ({ children }) => {
   const user = localStorage.getItem("user");
+  return user ? children : <Navigate to="/" />;
+};
 
+function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Login />} />
 
         <Route
           path="/dashboard"
-          element={user ? <Dashboard /> : <Navigate to="/" />}
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
         />
 
         <Route
           path="/notes"
-          element={user ? <Notes /> : <Navigate to="/" />}
+          element={
+            <ProtectedRoute>
+              <Notes />
+            </ProtectedRoute>
+          }
         />
-
       </Routes>
     </BrowserRouter>
   );
